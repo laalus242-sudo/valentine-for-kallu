@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valentine Week for MY FOREVER LOVE, MY KALLU, MY PRIYE 💖</title>
+  <style>
+/* Hide all day sections initially */
+.section {
+  display: none;
+}
+
+/* Home buttons styling */
+#home {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  align-items: center;
+}
+
+.home-btn, .back-btn {
+  background: var(--pink);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 90%;
+  max-width: 320px;
+}
+
+    :root {
+      --bg: #fff5f8;
+      --card: #ffffff;
+      --pink: #ff9ecf;
+      --text: #5a2a40;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+    }
+
+    .section {
+      background: var(--card);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      position: relative;
+    }
+
+    .photos {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .photos img {
+      width: 48%;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .love-note, .memory {
+      text-align: center;
+      font-size: 0.95rem;
+      margin: 12px 0;
+    }
+
+    .surprise-btn {
+      display: block;
+      margin: 15px auto 0;
+      background: var(--pink);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      color: white;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .popup {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .popup-content {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 80%;
+      text-align: center;
+      animation: pop 0.3s ease;
+    }
+
+    .popup-content img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+
+    .finale {
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Valentine Week for Neha 💕</h1>
+  <p>One day at a time… just like how I fell for you 🧸</p>
+</header>
+
+<div id="home">
+  <button class="home-btn" onclick="openSection('rose')">🌹 Rose Day</button>
+  <button class="home-btn" onclick="openSection('propose')">💍 Propose Day</button>
+  <button class="home-btn" onclick="openSection('chocolate')">🍫 Chocolate Day</button>
+  <button class="home-btn" onclick="openSection('teddy')">🧸 Teddy Day</button>
+  <button class="home-btn" onclick="openSection('promise')">🤞 Promise Day</button>
+  <button class="home-btn" onclick="openSection('hug')">🤗 Hug Day</button>
+  <button class="home-btn" onclick="openSection('kiss')">😘 Kiss Day</button>
+  <button class="home-btn" onclick="openSection('valentine')">❤️ Valentine</button>
+</div>
+
+<!-- ALL SECTIONS (UNCHANGED CONTENT) -->
+
+<!-- Rose Day -->
+<div class="section" id="rose" data-music="assets/music/rose.mp3">
+  <h2>🌹 Rose Day</h2>
+  <div class="love-note">Neha, I love youso much babyyy, your are 1000  times more beautiful than roses 🌸</div>
+  <div class="photos">
+    <img src="assets/images/rose1.jpeg" />
+    <img src="assets/images/rose2.jpeg" />
+  </div>
+  <div class="memory">Iss week aapke liye kuch khaas kara hai I hope you like it my love🥹</div>
+  <button class="surprise-btn" onclick="openPopup('assets/images/rose-surprise.jpeg')">Tap for surprise 💖</button>
+  <button class="back-btn" onclick="goHome()">← Back to Home</button>
+</div>
+
+<!-- Propose Day -->
+<div class="section" id="propose" data-music="assets/music/propose.mp3">
+  <h2>💍 Propose Day</h2>
+  <div class="love-note">Waise to mere liye harr din propose day hai but this one is for you🩷🥹</div>
+  <div class="photos">
+    <img src="assets/images/propose1.jpeg" />
+    <img src="assets/images/propose2.jpeg" />
+  </div>
+  <div class="memory">The day I proposed you on your birthday was such a special moment for me and for the fist time in my entire life I did something which took all the confidence I had and was so happy when you replied with "I LOVE YOU TOO"</div>
+  <button class="surprise-btn" onclick="openPopup('assets/images/propose-surprise.jpeg')">Tap for surprise 💖</button>
+  <button class="back-btn" onclick="goHome()">← Back to Home</button>
+</div>
+
+<!-- Chocolate Day -->
+<div class="section" id="chocolate" data-music="assets/music/chocolate.mp3">
+  <h2>🍫 Chocolate Day</h2>
+  <div class="love-note">Neha, chocolates are sweet, but somehow you still manage to be sweeter. Ganda tha na🥹but I tried</div>
+  <div class="photos">
+    <img src="assets/images/chocolate1.jpeg" />
+    <img src="assets/images/chocolate2.jpeg" />
+  </div>
+  <div class="memory">Chijjiess khilaunga apko boht saari thoda wait krlo tab tak ye dekho🥰</div>
+  <button class="surprise-btn" onclick="openPopup('assets/images/chocolate-surprise.jpeg')">Tap for surprise 💖</button>
+  <button class="back-btn" onclick="goHome()">← Back to Home</button>
+</div>
+
+<!-- Teddy Day -->
+<div class="section" id="teddy" data-music="assets/music/teddy.mp3">
+  <h2>🧸 Teddy Day</h2>
+  <div class="love-note">Mann karta hai apka teddy banke aapke saath rhu aur raat me dono gullu gullu karein🥹🤭</div>
+  <div class="photos">
+    <img src="assets/images/teddy1.jpeg" />
+    <img src="assets/images/teddy2.jpeg" />
+  </div>
+  <div class="memory">I love you soo much babyyyyy my cutuuuu🥹♥️🧿</div>
+  <button class="surprise-btn" onclick="openPopup('assets/images/teddy-surprise.jpeg')">Tap for surprise 💖</button>
+  <button class="back-btn" onclick="goHome()">← Back to Home</button>
+</div>
+
+<!-- Promise Day -->
+<div class="section" id="promise" data-music="assets/music/promise.mp3">
+  <h2>🤞 Promise Day</h2>
+  <div class="love-note">I promise to annoy you, love you, and stand by you—every single day.Can you do the same🥹🥹</div>
+  <div class="photos">
+    <img src="assets/images/promise1.jpeg" />
+    <img src="assets/images/promise2.jpeg" />
+  </div>
+  <div class="memory">Neha I promise that I will forever be with you, stand with you, be your companion forever and LOVE YOU FOREVER🥹🧿♥️</div>
+  <button class="surprise-btn" onclick="openPopup('assets/images/promise-surprise.jpeg')">Tap for surprise 💖</button>
+  <button class="back-btn" onclick="goHome()">← Back to Home</button>
+</div>
+
+<!-- Hug Day -->
+<div class="section" id="hug" data-music="assets/music/hug.mp3">
+  <h2>🤗 Hug Day</h2>
+  <div class="love-note">If I could, I’d pause time right here—inside your hug. Everything feels lighter when you hold me. Even bad days. Harr pal aapki baahon me rehne ka mann krta literally I wish I could lie life in your arms😭🥺</div>
+  <div class="photos">
+    <img src="assets/images/hug1.jpeg" />
+    <img src="assets/images/hug2.jpeg" />
+  </div>
+  <div class="memory">Every hug from you feels like home 🥹♥️🧿</div>
+  <button class="surprise-btn" onclick="openPopup('assets/images/hug-surprise.jpeg')">Tap for surprise 💖</button>
+  <button class="back-btn" onclick="goHome()">← Back to Home</button>
+</div>
+
+<!-- Kiss Day -->
+<div class="section" id="kiss" data-music="assets/music/kiss.mp3">
+  <h2>😘 Kiss Day</h2>
+  <div class="love-note">Boht saari kissiyaan deni hain aapko boht saari kab mauka dere🥹😚😚</div>
+  <div class="photos">
+    <img src="assets/images/kiss1.jpeg" />
+    <img src="assets/images/kiss2.jpeg" />
+  </div>
+  <div class="memory">I still remember the first time we kissed🥹 kasam se yrr maiii itnaaaaaaaa khushhh thaaaaaa APKI KASAM mai boht zyadaaaaa khush tha🥹🥹I felt that day ki you trusted me🥹🧿</div>
+  <button class="surprise-btn" onclick="openPopup('assets/images/kiss-surprise.jpeg')">Tap for surprise 💖</button>
+  <button class="back-btn" onclick="goHome()">← Back to Home</button>
+</div>
+
+<!-- Valentine -->
+<div class="section" id="valentine" data-music="assets/music/valentine.mp3">
+  <h2>❤️ Valentine’s Day</h2>
+  <p class="love-note">Final day🥹🧿Neha, this isn’t a website anymore. This is my heart, only for you. Please kabhi chhordke mat jana please boht chahta hu tumhe. I want to spend the rest of my life with you. I am very very sorry baby kabhi kabhi tumko samajh nahi pata hu bass maaf krdiya kro aur please gussa mt rha kro mai sach me kahin dhyaan nahi laga pata jab tum naraz ho gussa ho ya baat na karne ke mood me ho, I'm sorry galtiayn krta hu but this is also my first time living life and learning from my mistakes. I am sorry again baby for all the mistakes I made or will make but it never was or will be with the intention of hurting you 🥺♥️♥️</p>
+  <p class="memory">No matter how many days pass, I’ll always choose you. Again. And again. And again. Forever🥹🥹🧿"</p>
+  <button class="surprise-btn" onclick="showLetter()">Read my letter 💌</button>
+  <button class="back-btn" onclick="goHome()">← Back to Home</button>
+</div>
+
+<div class="popup" id="popup" onclick="closePopup()">
+  <div class="popup-content">
+    <img id="popup-img" src="" />
+    <p>Certified Neha Moment 🧸💕</p>
+  </div>
+</div>
+
+<script>
+  const sections = document.querySelectorAll('.section');
+  const home = document.getElementById('home');
+  let currentAudio = null;
+
+  function openSection(id) {
+    // Hide home
+    home.style.display = 'none';
+
+    // Hide all sections
+    sections.forEach(sec => sec.style.display = 'none');
+
+    // Show selected section
+    const activeSection = document.getElementById(id);
+    activeSection.style.display = 'block';
+    window.scrollTo(0, 0);
+
+    // Play section music
+    const music = activeSection.getAttribute('data-music');
+    if (music) {
+      if (currentAudio) currentAudio.pause();
+      currentAudio = new Audio(music);
+      currentAudio.loop = true;
+      currentAudio.volume = 0.5;
+      currentAudio.play();
+    }
+  }
+
+  function goHome() {
+    // Stop music
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio = null;
+    }
+
+    // Hide all sections
+    sections.forEach(sec => sec.style.display = 'none');
+
+    // Show home
+    home.style.display = 'flex';
+    window.scrollTo(0, 0);
+  }
+
+  function openPopup(src) {
+    document.getElementById('popup-img').src = src;
+    document.getElementById('popup').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+
+  // Floating hearts
+  setInterval(() => {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerText = '💖';
+    heart.style.left = Math.random() * 100 + 'vw';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+  }, 700);
+</script>
+ <!-- Handwritten Letter Modal --> <div class="popup" id="letter" onclick="closeLetter()"> <div class="popup-content" style="font-family: 'Comic Sans MS', cursive; font-size: 0.95rem; line-height: 1.6;"> <p>Neha,</p> <p> I don’t know how to say everything I feel in just words, so I tried my best to give you something memorable, something special🥹 Always remember ki no matter what, I will always choose you over anything matlab anything, sorry baby kabhi kabhi purani baatein leke bhi pareshan karta but its just ki thoda insecure hu but I really trust you with my whole life, but I don't trust other people, Mere liye koi specific day valentine day nahi hai🥹For me every day is a valentine day IF ITS WITH YOU🥹❤️🧿 I LOVEEEEEE YOUUUUU SOOOOOOO MUCHHHH BABYYY❤️❤️🥹🧿 </p> <p> You are my comfort, my chaos, my calm, and my happiest habit. I promise to love you on easy days and hold you tighter on hard ones. </p> <p> If forever had a name, FOR ME IT WOULD BE "NEHA RAWAT🥹🧿" </p> <p>Always yours, and Thankful❤️🥹🧿<br/>❤️</p> </div> </div> <script> function showLetter() { document.getElementById('letter').style.display = 'flex'; launchConfetti(); } function closeLetter() { document.getElementById('letter').style.display = 'none'; } function launchConfetti() { for (let i = 0; i < 40; i++) { const heart = document.createElement('div'); heart.innerText = '💖'; heart.style.position = 'fixed'; heart.style.left = Math.random() * 100 + 'vw'; heart.style.top = '-20px'; heart.style.fontSize = (16 + Math.random() * 16) + 'px'; heart.style.animation = 'confettiFall 3s linear forwards'; document.body.appendChild(heart); setTimeout(() => heart.remove(), 3000); } } </script> <style> @keyframes confettiFall { to { transform: translateY(110vh) rotate(360deg); opacity: 0; } } </style> </body> </html>
